@@ -10,15 +10,15 @@ query ($repoOwner: String!, $repoName: String!, $tagCount: Int!, $tagCursor: Str
         name
         id
         target {
-        	... on Commit {
-          	author {
-            	name
+	  ... on Commit {
+            author {
+              name
               date
-        		}
-      		}
-    		}
-  		}
-		}
+            }
+      	  }
+    	}
+      }
+    }
   }
 }`;
 
