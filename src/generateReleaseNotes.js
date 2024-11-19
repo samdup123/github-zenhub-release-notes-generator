@@ -1,3 +1,5 @@
+const githubUrl = "https://github.com/";
+
 function generateMarkdownTable(data) {
   const headerRow = `| ${data[0].join(" | ")} |\n`;
   const separatorRow = `| ${data[0].map(() => "---").join(" | ")} |\n`;
@@ -35,7 +37,9 @@ module.exports = (
   prsToIssueNumbers,
   issues,
   releaseA,
-  releaseB
+  releaseB,
+  repoOwner,
+  repoName
 ) => {
   commitsBetweenReleases.forEach((commit) => {
     const pr = commit.associatedPullRequests.nodes[0];
@@ -45,14 +49,15 @@ module.exports = (
 
     const issueNumbers = prsToIssueNumbers[prNumber];
 
-    const authorRef = "@" + commit.author.user.login;
-    const prRef = "#" + prNumber;
+    const authorRef = "[@" + commit.author.user.login + "](" + githubUrl + commit.author.user.login + ")";
+    const prRef = "[#" + prNumber + "](" + githubUrl + repoOwner + "/" + repoName + "/pull/" + prNumber + ")";
+    const IssueRef = (issueNumber) => "[#" + issueNumber + "](" + githubUrl + repoOwner + "/" + repoName + "/issues/" + issueNumber + ")";
 
     if (issueNumbers) {
       issueNumbers.forEach((issueNumber) => {
         const issue = issues[issueNumber];
         releaseNotesTableData.push([
-          "#" + issue.number,
+          IssueRef(issueNumber),
           issue.title,
           prRef,
           prTitle,

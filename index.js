@@ -136,7 +136,9 @@ const core = async () => {
     prsToIssueNumbers,
     issues,
     releaseA,
-    releaseB
+    releaseB,
+    repoOwner,
+    repoName
   );
 
   fs.mkdirSync("./output/", { recursive: true });
