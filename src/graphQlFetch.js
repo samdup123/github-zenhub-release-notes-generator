@@ -4,7 +4,6 @@ const graphQlFetch = async (graphqlUrl, apiToken, query, variables) => {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      "Graphql-Features": "sub_issues",
       Authorization: `Bearer ${apiToken}`,
     },
     body: JSON.stringify({ query, variables }),
