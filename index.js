@@ -1,4 +1,3 @@
-const GraphQlQueries = require("./src/GraphQlQueries");
 const fetchIssues = require("./src/fetchIssues");
 const fetchAllTags = require("./src/fetchAllTags");
 const fetchCommits = require("./src/fetchCommits");
