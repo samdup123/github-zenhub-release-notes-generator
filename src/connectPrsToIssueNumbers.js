@@ -6,7 +6,6 @@ module.exports = (issues, repositoryName) => {
 
     if (issue.connectedPrs.nodes.length > 0) {
       issue.connectedPrs.nodes.forEach((pr) => {
-        console.log('pr', pr);
         if (pr.repository.name === issue.repository.name) {
           if (!prs[pr.number]) {
             prs[pr.number] = [];

@@ -15,8 +15,8 @@ module.exports = async (repoOwner, repoName, githubApiToken) => {
       tagCount: defaultTagCount,
       tagCursor,
     });
-    tags = tags.concat(data.data.repository.refs.nodes);
-    const pageInfo = data.data.repository.refs.pageInfo;
+    tags = tags.concat(data.repository.refs.nodes);
+    const pageInfo = data.repository.refs.pageInfo;
     hasNextPage = pageInfo.hasNextPage;
     tagCursor = pageInfo.endCursor;
   }

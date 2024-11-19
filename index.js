@@ -4,17 +4,54 @@ const fetchCommits = require("./src/fetchCommits");
 const connectPrsToIssueNumbers = require("./src/connectPrsToIssueNumbers");
 const generateReleaseNotes = require("./src/generateReleaseNotes");
 const fs = require("fs");
+const minimist = require("minimist");
 
-const repoOwner = process.argv[2];
-const repoName = process.argv[3];
-const branchName = process.argv[4];
-const workspaceId = process.argv[5];
-const releaseId = process.argv[6];
-const repositoryName = process.argv[7];
-const githubApiToken = process.argv[8];
-const zenhubApiToken = process.argv[9];
-const releaseA = process.argv[10];
-const releaseB = process.argv[11];
+const args = minimist(process.argv.slice(2));
+
+const repoOwner = args['repo-owner']
+const repoName = args['repo-name']
+const branchName = args['branch-name']
+const workspaceId = args['workspace-id']
+const releaseId = args['release-id']
+const githubApiToken = args['github-api-token']
+const zenhubApiToken = args['zenhub-api-token']
+const releaseA = args['_'][0];
+const releaseB = args['_'][1];
+
+const checkArgs = (args) => {
+
+  if (!(repoOwner && repoName && branchName && workspaceId && releaseId && githubApiToken && zenhubApiToken && releaseA && releaseB)) {
+    console.error(
+      `Please provide the following arguments: repoOwner, repoName, branchName, workspaceId, releaseId, githubApiToken, zenhubApiToken, releaseA, releaseB
+       Example (generating release notes for the React Library):
+       node index.js \
+         --repo-owner facebook \
+         --repo-name react \
+         --workspace-id <you need to use GitHub GraphQL to find this> \
+         --release-id <you need to use Zenhub GraphQL to find this> \
+         --github-api-token <find this on your github account, don't store anywhere on the internet> \
+         --zenhub-api-token <find this on your zenhub account, don't store anywhere on the internet> \
+         releaseA # must match the name of an actual release tag on the GitHub Repository \
+         releaseB # must match the name of an actual release tag on the GitHub Repository and be newer than releaseA
+
+
+      ----------------
+
+      What you provided
+      --repo-owner ${args['repo-owner']}
+      --repo-name ${args['repo-name']}
+      --branch-name ${args['branch-name']}
+      --workspace-id ${args['workspace-id']}
+      --release-id ${args['release-id']}
+      --github-api-token ${args['github-api-token']}
+      --zenhub-api-token ${args['zenhub-api-token']}
+      releaseA ${args['_'][0]}
+      releaseA ${args['_'][1]}
+      `
+    );
+    process.exit(1);
+  }
+}
 
 const tagExists = (releaseName, tags) => {
   for (let i = 0; i < tags.length; i++) {
@@ -27,6 +64,7 @@ const tagExists = (releaseName, tags) => {
 };
 
 const core = async () => {
+  checkArgs(args);
   console.log("fetching tags");
   const tags = await fetchAllTags(repoOwner, repoName, githubApiToken);
 
@@ -82,13 +120,13 @@ const core = async () => {
   const issues = await fetchIssues(
     workspaceId,
     releaseId,
-    repositoryName,
+    repoName,
     zenhubApiToken
   );
 
   const prsToIssueNumbers = connectPrsToIssueNumbers(
     issues,
-    repositoryName
+    repoName
   );
 
   console.log("generating release notes");

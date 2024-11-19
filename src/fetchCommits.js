@@ -24,7 +24,7 @@ module.exports = async (
       commitCursor,
     });
 
-    data = data.data.repository.ref.target.history;
+    data = data.repository.ref.target.history;
     const pageInfo = data.pageInfo;
     hasNextPage = pageInfo.hasNextPage;
     commitCursor = pageInfo.endCursor;

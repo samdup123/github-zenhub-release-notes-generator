@@ -36,8 +36,8 @@ async function fetchEpics(
       variables.issueRetrievalCount = defaultRetrievalCount;
     }
     let data = await zenhubEpicsQuery(variables);
-    let epics = data.data.workspace.epics.nodes;
-    const pageInfo = data.data.workspace.epics.pageInfo;
+    let epics = data.workspace.epics.nodes;
+    const pageInfo = data.workspace.epics.pageInfo;
     epics = filterEpicsByRelease(epics, releaseId);
     epics = filterEpicsByRepository(epics, repositoryName);
 
