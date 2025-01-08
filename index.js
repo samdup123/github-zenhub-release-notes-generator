@@ -8,19 +8,30 @@ const minimist = require("minimist");
 
 const args = minimist(process.argv.slice(2));
 
-const repoOwner = args['repo-owner']
-const repoName = args['repo-name']
-const branchName = args['branch-name']
-const workspaceId = args['workspace-id']
-const releaseId = args['release-id']
-const githubApiToken = args['github-api-token']
-const zenhubApiToken = args['zenhub-api-token']
-const releaseA = args['_'][0];
-const releaseB = args['_'][1];
+const repoOwner = args["repo-owner"];
+const repoName = args["repo-name"];
+const branchName = args["branch-name"];
+const workspaceId = args["workspace-id"];
+const releaseId = args["release-id"];
+const githubApiToken = args["github-api-token"];
+const zenhubApiToken = args["zenhub-api-token"];
+const releaseA = args["_"][0];
+const releaseB = args["_"][1];
 
 const checkArgs = (args) => {
-
-  if (!(repoOwner && repoName && branchName && workspaceId && releaseId && githubApiToken && zenhubApiToken && releaseA && releaseB)) {
+  if (
+    !(
+      repoOwner &&
+      repoName &&
+      branchName &&
+      workspaceId &&
+      releaseId &&
+      githubApiToken &&
+      zenhubApiToken &&
+      releaseA &&
+      releaseB
+    )
+  ) {
     console.error(
       `Please provide the following arguments: repoOwner, repoName, branchName, workspaceId, releaseId, githubApiToken, zenhubApiToken, releaseA, releaseB
        Example (generating release notes for the React Library):
@@ -38,20 +49,20 @@ const checkArgs = (args) => {
       ----------------
 
       What you provided
-      --repo-owner ${args['repo-owner']}
-      --repo-name ${args['repo-name']}
-      --branch-name ${args['branch-name']}
-      --workspace-id ${args['workspace-id']}
-      --release-id ${args['release-id']}
-      --github-api-token ${args['github-api-token']}
-      --zenhub-api-token ${args['zenhub-api-token']}
-      releaseA ${args['_'][0]}
-      releaseA ${args['_'][1]}
+      --repo-owner ${args["repo-owner"]}
+      --repo-name ${args["repo-name"]}
+      --branch-name ${args["branch-name"]}
+      --workspace-id ${args["workspace-id"]}
+      --release-id ${args["release-id"]}
+      --github-api-token ${args["github-api-token"]}
+      --zenhub-api-token ${args["zenhub-api-token"]}
+      releaseA ${args["_"][0]}
+      releaseA ${args["_"][1]}
       `
     );
     process.exit(1);
   }
-}
+};
 
 const tagExists = (releaseName, tags) => {
   for (let i = 0; i < tags.length; i++) {
@@ -71,16 +82,26 @@ const core = async () => {
   const releaseaExists = tagExists(releaseA, tags);
   const releasebExists = tagExists(releaseB, tags);
 
-  if (!releaseaExists && !releasebExists) {
-    console.error(
-      "the tag you are searching for does not exist, please use one of the following tags names"
-    );
+  if (releaseaExists && releasebExists) {
+    console.log("requested tags found");
+  } else {
+    if (releaseaExists && !releasebExists) {
+      console.error(
+        `the tag you are searching for does not exist (${releaseB}), please use one of the following tags names`
+      );
+    } else if (!releaseaExists && releasebExists) {
+      console.error(
+        `the tag you are searching for does not exist (${releaseA}), please use one of the following tags names`
+      );
+    } else {
+      console.error(
+        `the tags you are searching for do not exist (${releaseA}, ${releaseB}), please use one of the following tags names`
+      );
+    }
     tags.forEach((tag) => {
       console.error(tag.name);
     });
     process.exit(1);
-  } else {
-    console.log("requested tags found");
   }
 
   let releaseADate;
@@ -96,7 +117,9 @@ const core = async () => {
   }
 
   if (releaseADate > releaseBDate) {
-    console.error("releaseA should be older than releaseB");
+    console.error(
+      `releaseA should be older than releaseB. ReleaseA: ${releaseADate}, ReleaseB: ${releaseBDate}`
+    );
     process.exit(1);
   }
 
@@ -124,10 +147,7 @@ const core = async () => {
     zenhubApiToken
   );
 
-  const prsToIssueNumbers = connectPrsToIssueNumbers(
-    issues,
-    repoName
-  );
+  const prsToIssueNumbers = connectPrsToIssueNumbers(issues, repoName);
 
   console.log("generating release notes");
 

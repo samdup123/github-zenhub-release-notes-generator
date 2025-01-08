@@ -13,10 +13,10 @@ function generateMarkdownTable(data) {
 
 const releaseNotesTableData = [
   [
-    "Issue",
-    "Issue Title",
     "Pull Request",
     "Pull Request Title",
+    "Issue(s)",
+    "Issue Title(s)",
     "Author",
     "Date",
   ],
@@ -41,32 +41,64 @@ module.exports = (
   repoOwner,
   repoName
 ) => {
+  const formatAuthorRef = (login) =>
+    "[@" + login + "](" + githubUrl + login + ")";
+
+  const formatPrRef = (prNumber) =>
+    "[#" +
+    prNumber +
+    "](" +
+    githubUrl +
+    repoOwner +
+    "/" +
+    repoName +
+    "/pull/" +
+    prNumber +
+    ")";
+
+  const formatIssueRef = (issueNumber) =>
+    "[#" +
+    issueNumber +
+    "](" +
+    githubUrl +
+    repoOwner +
+    "/" +
+    repoName +
+    "/issues/" +
+    issueNumber +
+    ")";
+
   commitsBetweenReleases.forEach((commit) => {
     const pr = commit.associatedPullRequests.nodes[0];
     const prNumber = pr.number;
     const prTitle = pr.title;
     const date = formatDate(new Date(commit.committedDate));
-
+    const login = commit.author.user.login;
     const issueNumbers = prsToIssueNumbers[prNumber];
 
-    const authorRef = "[@" + commit.author.user.login + "](" + githubUrl + commit.author.user.login + ")";
-    const prRef = "[#" + prNumber + "](" + githubUrl + repoOwner + "/" + repoName + "/pull/" + prNumber + ")";
-    const IssueRef = (issueNumber) => "[#" + issueNumber + "](" + githubUrl + repoOwner + "/" + repoName + "/issues/" + issueNumber + ")";
+    const authorRef = formatAuthorRef(login);
+    const prRef = formatPrRef(prNumber);
 
     if (issueNumbers) {
-      issueNumbers.forEach((issueNumber) => {
-        const issue = issues[issueNumber];
-        releaseNotesTableData.push([
-          IssueRef(issueNumber),
-          issue.title,
-          prRef,
-          prTitle,
-          authorRef,
-          date,
-        ]);
-      });
+      const firstIssueNumber = issueNumbers[0];
+      let issueRefs = formatIssueRef(firstIssueNumber);
+      let issueTitles = issues[firstIssueNumber].title;
+
+      for (let i = 1; i < issueNumbers.length; i++) {
+        const issueNumber = issueNumbers[i];
+        issueRefs += ", " + formatIssueRef(issueNumber);
+        issueTitles += ", " + issues[issueNumber].title;
+      }
+      releaseNotesTableData.push([
+        prRef,
+        prTitle,
+        issueRefs,
+        issueTitles,
+        authorRef,
+        date,
+      ]);
     } else {
-      releaseNotesTableData.push(["", "", prRef, prTitle, authorRef, date]);
+      releaseNotesTableData.push([prRef, prTitle, "", "", authorRef, date]);
     }
   });
 
