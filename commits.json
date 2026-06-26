@@ -1,0 +1,1532 @@
+[
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3217,
+          "title": "Smart HQ Mobile App Setting Clock (12hr / 24 hr) fix"
+        }
+      ]
+    },
+    "committedDate": "2026-06-23T20:07:05Z",
+    "author": {
+      "name": "Dk Anouan",
+      "user": {
+        "login": "Dknyc05"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3172,
+          "title": "Update to ROUX Components v0.2.2"
+        }
+      ]
+    },
+    "committedDate": "2026-06-23T17:43:53Z",
+    "author": {
+      "name": "AsimHameed",
+      "user": {
+        "login": "AsimHameed"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3206,
+          "title": "Ensure consistent dialog button label capitalization"
+        }
+      ]
+    },
+    "committedDate": "2026-06-17T19:13:35Z",
+    "author": {
+      "name": "Cristina Tomsa",
+      "user": {
+        "login": "CristinaTomsa"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3163,
+          "title": "Fix Polling Read Timer Leak"
+        }
+      ]
+    },
+    "committedDate": "2026-06-16T19:19:04Z",
+    "author": {
+      "name": "Derek Osborne",
+      "user": {
+        "login": "djmaster458"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3213,
+          "title": "Rev Version From 0.2.4 to 0.2.5 For Rosie Wall Oven ADC Hotfix "
+        }
+      ]
+    },
+    "committedDate": "2026-06-16T16:50:59Z",
+    "author": {
+      "name": "Sam DuPlessis",
+      "user": {
+        "login": "samdup123"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3220,
+          "title": "Update Confidence Threshold and Add a New Model for cook cam"
+        }
+      ]
+    },
+    "committedDate": "2026-06-16T15:53:29Z",
+    "author": {
+      "name": "Sam DuPlessis",
+      "user": {
+        "login": "samdup123"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3202,
+          "title": "Skyllama PR Review"
+        }
+      ]
+    },
+    "committedDate": "2026-06-15T18:51:45Z",
+    "author": {
+      "name": "Sneha Srinivasan",
+      "user": {
+        "login": "sneha8899"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3207,
+          "title": "Fix service mode entry after UI reboot"
+        }
+      ]
+    },
+    "committedDate": "2026-06-12T18:29:29Z",
+    "author": {
+      "name": "Stephan Baker",
+      "user": {
+        "login": "stephanbaker"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3201,
+          "title": "Fix Showroom Media Volume - Write Audio Media Volume Request ERD F21E"
+        }
+      ]
+    },
+    "committedDate": "2026-06-10T19:44:05Z",
+    "author": {
+      "name": "Stephan Baker",
+      "user": {
+        "login": "stephanbaker"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3183,
+          "title": "Update image upload metadata to include aosp and cook cam model verisons"
+        }
+      ]
+    },
+    "committedDate": "2026-06-09T19:03:38Z",
+    "author": {
+      "name": "VaishnaviKarnam",
+      "user": {
+        "login": "VaishnaviKarnam"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3177,
+          "title": "Update Version Number to v0.2.4"
+        }
+      ]
+    },
+    "committedDate": "2026-06-05T18:45:04Z",
+    "author": {
+      "name": "Sam DuPlessis",
+      "user": {
+        "login": "samdup123"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3178,
+          "title": "Sync Cook Request Providers Every Time The Cavity Status Changes"
+        }
+      ]
+    },
+    "committedDate": "2026-06-05T18:35:28Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3175,
+          "title": "Explicitly Read Critical ERDs When Missing and Heartbeat After Verifying"
+        }
+      ]
+    },
+    "committedDate": "2026-06-05T17:52:23Z",
+    "author": {
+      "name": "Stephan Baker",
+      "user": {
+        "login": "stephanbaker"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3149,
+          "title": "Add Audio Card Widget Tests"
+        }
+      ]
+    },
+    "committedDate": "2026-06-05T17:09:11Z",
+    "author": {
+      "name": "Derek Osborne",
+      "user": {
+        "login": "djmaster458"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3176,
+          "title": "Update CookCam Submodule To Remove Whole Chicken"
+        }
+      ]
+    },
+    "committedDate": "2026-06-04T15:36:04Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3162,
+          "title": "Add semantic identifiers for Assistant, Settings, and Oven Tips cards"
+        }
+      ]
+    },
+    "committedDate": "2026-06-03T14:24:56Z",
+    "author": {
+      "name": "Cristina Tomsa",
+      "user": {
+        "login": "CristinaTomsa"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3161,
+          "title": "Show correct connect probe image for single double models"
+        }
+      ]
+    },
+    "committedDate": "2026-06-01T18:45:59Z",
+    "author": {
+      "name": "VaishnaviKarnam",
+      "user": {
+        "login": "VaishnaviKarnam"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3151,
+          "title": "Show unavailable card on recipe widget when wifi reconnecting"
+        }
+      ]
+    },
+    "committedDate": "2026-05-29T23:55:37Z",
+    "author": {
+      "name": "Serdar",
+      "user": {
+        "login": "s12dar"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3160,
+          "title": "Fix Title Text Cutoff in Pizza"
+        }
+      ]
+    },
+    "committedDate": "2026-05-29T19:53:24Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3152,
+          "title": "Do not launch the walloven app until the System UI is running"
+        }
+      ]
+    },
+    "committedDate": "2026-05-28T20:52:58Z",
+    "author": {
+      "name": "Matt Hendrix",
+      "user": {
+        "login": "matthewhendrix"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3126,
+          "title": "Audio Card with No MediaSession state."
+        }
+      ]
+    },
+    "committedDate": "2026-05-27T15:24:32Z",
+    "author": {
+      "name": "ramavelpula",
+      "user": {
+        "login": "ramavelpula"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3147,
+          "title": "Update CookCam Model"
+        }
+      ]
+    },
+    "committedDate": "2026-05-27T14:54:01Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3146,
+          "title": "Tune bridge version update 1.0.1"
+        }
+      ]
+    },
+    "committedDate": "2026-05-27T14:33:50Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3141,
+          "title": "Update Version to 0.2.3"
+        }
+      ]
+    },
+    "committedDate": "2026-05-27T13:41:02Z",
+    "author": {
+      "name": "Sam DuPlessis",
+      "user": {
+        "login": "samdup123"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3140,
+          "title": "Fix InstructionScreen Alignment"
+        }
+      ]
+    },
+    "committedDate": "2026-05-27T12:55:13Z",
+    "author": {
+      "name": "Stephan Baker",
+      "user": {
+        "login": "stephanbaker"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3114,
+          "title": "Use Appliance API To Check If Camera Is Supported"
+        }
+      ]
+    },
+    "committedDate": "2026-05-22T19:31:49Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3130,
+          "title": "Built-in Kotlin & AGP 9.0 Migration - Support flutter 3.44"
+        }
+      ]
+    },
+    "committedDate": "2026-05-22T14:14:14Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3080,
+          "title": "Disable bluetooth streaming during self clean "
+        }
+      ]
+    },
+    "committedDate": "2026-05-22T13:51:59Z",
+    "author": {
+      "name": "VaishnaviKarnam",
+      "user": {
+        "login": "VaishnaviKarnam"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3101,
+          "title": "Fix voice assistant overlay not dismissing after cook command"
+        }
+      ]
+    },
+    "committedDate": "2026-05-21T19:56:38Z",
+    "author": {
+      "name": "Serdar",
+      "user": {
+        "login": "s12dar"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3121,
+          "title": "Update roux-components to 1.22"
+        }
+      ]
+    },
+    "committedDate": "2026-05-21T14:10:11Z",
+    "author": {
+      "name": "Matt Hendrix",
+      "user": {
+        "login": "matthewhendrix"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3125,
+          "title": "Move CookCam Route Outside of Cavity Routes"
+        }
+      ]
+    },
+    "committedDate": "2026-05-21T13:23:41Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3120,
+          "title": "Fix heading capitalization for Artisan Pizza status screen"
+        }
+      ]
+    },
+    "committedDate": "2026-05-19T20:14:45Z",
+    "author": {
+      "name": "lakshmiK",
+      "user": {
+        "login": "lakshmiSkalvakuri"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3118,
+          "title": "Updated platform widget version for timer widget"
+        }
+      ]
+    },
+    "committedDate": "2026-05-19T17:25:42Z",
+    "author": {
+      "name": "nischithaGE",
+      "user": {
+        "login": "nischithaGE"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3091,
+          "title": "Increase SIze of Button that Shows DigitPad on Temperature Configuration"
+        }
+      ]
+    },
+    "committedDate": "2026-05-19T13:58:41Z",
+    "author": {
+      "name": "Stephan Baker",
+      "user": {
+        "login": "stephanbaker"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3113,
+          "title": "Fix UI overlap between page indicators and Start button in configuration flow"
+        }
+      ]
+    },
+    "committedDate": "2026-05-19T12:55:22Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3108,
+          "title": "Add Confidence Arg to ADB Command, Update Cook Cam JSON"
+        }
+      ]
+    },
+    "committedDate": "2026-05-18T21:00:35Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3106,
+          "title": "Update Artisan Pizza Mode Platform.json Once More"
+        }
+      ]
+    },
+    "committedDate": "2026-05-18T20:49:19Z",
+    "author": {
+      "name": "Sam DuPlessis",
+      "user": {
+        "login": "samdup123"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3100,
+          "title": "Update oven light sound to Touch Sound"
+        }
+      ]
+    },
+    "committedDate": "2026-05-18T16:15:01Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3088,
+          "title": "Respect User Choice For Image Upload Enable/Disable"
+        }
+      ]
+    },
+    "committedDate": "2026-05-18T15:38:07Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3089,
+          "title": "Revert HomeScreenCavityStatusCard Button Sizes"
+        }
+      ]
+    },
+    "committedDate": "2026-05-14T22:06:26Z",
+    "author": {
+      "name": "Stephan Baker",
+      "user": {
+        "login": "stephanbaker"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3078,
+          "title": "Fix two alert tone for probe prohibited due to duplicate notification"
+        }
+      ]
+    },
+    "committedDate": "2026-05-14T19:12:40Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3069,
+          "title": "Fix Fault Code 601 Camera Presence Handling for Unsupported Camera Models"
+        }
+      ]
+    },
+    "committedDate": "2026-05-13T13:38:51Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3066,
+          "title": "Increase Specific Button Sizes"
+        }
+      ]
+    },
+    "committedDate": "2026-05-13T13:20:56Z",
+    "author": {
+      "name": "Stephan Baker",
+      "user": {
+        "login": "stephanbaker"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3071,
+          "title": "Update Platform JSON"
+        }
+      ]
+    },
+    "committedDate": "2026-05-13T11:29:20Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3068,
+          "title": "Oops - Downgrade to 0.2.2"
+        }
+      ]
+    },
+    "committedDate": "2026-05-12T21:10:21Z",
+    "author": {
+      "name": "Sam DuPlessis",
+      "user": {
+        "login": "samdup123"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3070,
+          "title": "Update To Latest CookCam Model"
+        }
+      ]
+    },
+    "committedDate": "2026-05-12T20:27:10Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3061,
+          "title": "Fix CarouselContainer state leakage by improving widget keys with stepName"
+        }
+      ]
+    },
+    "committedDate": "2026-05-12T18:36:08Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3025,
+          "title": "Fix temperature option tile stuck on default temp"
+        }
+      ]
+    },
+    "committedDate": "2026-05-12T17:50:14Z",
+    "author": {
+      "name": "lakshmiK",
+      "user": {
+        "login": "lakshmiSkalvakuri"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2874,
+          "title": "Use Recipe/Menu Background Image from platform.json"
+        }
+      ]
+    },
+    "committedDate": "2026-05-12T13:48:09Z",
+    "author": {
+      "name": "lakshmiK",
+      "user": {
+        "login": "lakshmiSkalvakuri"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3058,
+          "title": "Play touch sound on tap of home screen title tab - Fix HomeScreen tests"
+        }
+      ]
+    },
+    "committedDate": "2026-05-12T13:07:01Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3054,
+          "title": "Update to version 0.2.3 for ADC"
+        }
+      ]
+    },
+    "committedDate": "2026-05-12T12:39:41Z",
+    "author": {
+      "name": "Sam DuPlessis",
+      "user": {
+        "login": "samdup123"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3028,
+          "title": "Cook Cam Navigation Improvement, Other Updates"
+        }
+      ]
+    },
+    "committedDate": "2026-05-11T20:03:10Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3032,
+          "title": "Fix unintended navigation to Home screen during active app and video sessions on door toggle"
+        }
+      ]
+    },
+    "committedDate": "2026-05-11T19:44:32Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3042,
+          "title": "Fix stack overflow error on CookTimerService init"
+        }
+      ]
+    },
+    "committedDate": "2026-05-11T14:44:00Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3050,
+          "title": "Bump Platform Widgets for Timer Bridge Receiver Leak"
+        }
+      ]
+    },
+    "committedDate": "2026-05-08T18:04:49Z",
+    "author": {
+      "name": "Derek Osborne",
+      "user": {
+        "login": "djmaster458"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3036,
+          "title": "Update all dependency libraries to their latest versions."
+        }
+      ]
+    },
+    "committedDate": "2026-05-08T14:01:57Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3023,
+          "title": "Refactored image upload flow to use a single long-lived isolate"
+        }
+      ]
+    },
+    "committedDate": "2026-05-07T19:36:01Z",
+    "author": {
+      "name": "VaishnaviKarnam",
+      "user": {
+        "login": "VaishnaviKarnam"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3045,
+          "title": "Fix bottom alignment for single cavity card in home screen"
+        }
+      ]
+    },
+    "committedDate": "2026-05-07T17:54:23Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3044,
+          "title": "Use Clerk ERD to Force Enable Mic for Audio Test"
+        }
+      ]
+    },
+    "committedDate": "2026-05-07T14:49:30Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3029,
+          "title": "Reset all Recipe related providers before navigating to edit"
+        }
+      ]
+    },
+    "committedDate": "2026-05-05T19:56:26Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3031,
+          "title": "Fix UI not Navigation to Status After Self Clean"
+        }
+      ]
+    },
+    "committedDate": "2026-05-05T16:11:26Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3026,
+          "title": "Explore page deep link route was missing"
+        }
+      ]
+    },
+    "committedDate": "2026-05-04T18:01:55Z",
+    "author": {
+      "name": "nischithaGE",
+      "user": {
+        "login": "nischithaGE"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3022,
+          "title": "Fix Mode Tiles Not Playing Unavailable Tone"
+        }
+      ]
+    },
+    "committedDate": "2026-05-01T19:27:07Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3009,
+          "title": "Fix Service Mode Door Open Request Being Re-requested"
+        }
+      ]
+    },
+    "committedDate": "2026-05-01T19:20:48Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3017,
+          "title": "Update Audio Card Text"
+        }
+      ]
+    },
+    "committedDate": "2026-05-01T12:51:50Z",
+    "author": {
+      "name": "Derek Osborne",
+      "user": {
+        "login": "djmaster458"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2999,
+          "title": "Update Bottom Padding Below Timer Progress Bar on Home Screen Cavity Card "
+        }
+      ]
+    },
+    "committedDate": "2026-04-30T20:30:26Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3016,
+          "title": "Add ADB Intent to Retrieve Cook Cam Confidence Threshold"
+        }
+      ]
+    },
+    "committedDate": "2026-04-30T17:06:03Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2981,
+          "title": "Update Cook Cam metadata to include top 3 food classifications with percentage"
+        }
+      ]
+    },
+    "committedDate": "2026-04-30T15:10:30Z",
+    "author": {
+      "name": "VaishnaviKarnam",
+      "user": {
+        "login": "VaishnaviKarnam"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3007,
+          "title": "Remove unused system toast code"
+        }
+      ]
+    },
+    "committedDate": "2026-04-29T19:48:13Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2995,
+          "title": "Prevent door open wake during OTA available prompt"
+        }
+      ]
+    },
+    "committedDate": "2026-04-29T16:56:14Z",
+    "author": {
+      "name": "Serdar",
+      "user": {
+        "login": "s12dar"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3003,
+          "title": "Fix Self Clean Mode Tile Flickering While Too Hot"
+        }
+      ]
+    },
+    "committedDate": "2026-04-29T16:46:56Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2948,
+          "title": "Fix system router single cavity tests"
+        }
+      ]
+    },
+    "committedDate": "2026-04-29T15:20:58Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3002,
+          "title": "Bump Version to 0.2.1"
+        }
+      ]
+    },
+    "committedDate": "2026-04-29T15:03:28Z",
+    "author": {
+      "name": "Stephan Baker",
+      "user": {
+        "login": "stephanbaker"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 3000,
+          "title": "Add Camera Fault 601"
+        }
+      ]
+    },
+    "committedDate": "2026-04-29T14:28:08Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2980,
+          "title": "Fixed: Incorrect system notification after reopening door during steam clean cycle Lower cavity"
+        }
+      ]
+    },
+    "committedDate": "2026-04-29T13:20:01Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2991,
+          "title": "Update the home screen cavity status card for single-cavity display."
+        }
+      ]
+    },
+    "committedDate": "2026-04-28T19:40:29Z",
+    "author": {
+      "name": "prudhviraju",
+      "user": {
+        "login": "prudhviraju"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2993,
+          "title": "Fix Platform Cards Stuck In Connected State, Fix Weather Providers"
+        }
+      ]
+    },
+    "committedDate": "2026-04-28T17:24:30Z",
+    "author": {
+      "name": "Derek Osborne",
+      "user": {
+        "login": "djmaster458"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2837,
+          "title": "Cook Cam Image Upload Design"
+        }
+      ]
+    },
+    "committedDate": "2026-04-27T18:16:59Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2979,
+          "title": "Fix hanging integration test"
+        }
+      ]
+    },
+    "committedDate": "2026-04-27T15:41:44Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2977,
+          "title": "To go home on back from mode screen"
+        }
+      ]
+    },
+    "committedDate": "2026-04-24T21:38:28Z",
+    "author": {
+      "name": "lakshmiK",
+      "user": {
+        "login": "lakshmiSkalvakuri"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2804,
+          "title": "Cook Cam AI Design"
+        }
+      ]
+    },
+    "committedDate": "2026-04-24T19:18:15Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2971,
+          "title": "Fix UI sound mappings"
+        }
+      ]
+    },
+    "committedDate": "2026-04-24T16:11:32Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2960,
+          "title": "Reset Recipe Providers Before Sabbath Start - Fix for invalid Sabbath navigation when started while in Recipe Edit"
+        }
+      ]
+    },
+    "committedDate": "2026-04-23T19:38:05Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2952,
+          "title": "Cook Cam Updates"
+        }
+      ]
+    },
+    "committedDate": "2026-04-23T15:25:40Z",
+    "author": {
+      "name": "ben-strehl",
+      "user": {
+        "login": "ben-strehl"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2975,
+          "title": "Platform json Update for NY Pizza"
+        }
+      ]
+    },
+    "committedDate": "2026-04-23T15:12:14Z",
+    "author": {
+      "name": "Sam DuPlessis",
+      "user": {
+        "login": "samdup123"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2962,
+          "title": "Bump Version to 0.2.0 for Initial ADC Release"
+        }
+      ]
+    },
+    "committedDate": "2026-04-22T15:41:35Z",
+    "author": {
+      "name": "Sam DuPlessis",
+      "user": {
+        "login": "samdup123"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2946,
+          "title": "Add Audio Widget"
+        }
+      ]
+    },
+    "committedDate": "2026-04-22T15:18:17Z",
+    "author": {
+      "name": "Derek Osborne",
+      "user": {
+        "login": "djmaster458"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2949,
+          "title": "Update roux-components version"
+        }
+      ]
+    },
+    "committedDate": "2026-04-22T13:48:14Z",
+    "author": {
+      "name": "Cristina Tomsa",
+      "user": {
+        "login": "CristinaTomsa"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2895,
+          "title": "Adding Support for Artisan Pizza Mode "
+        }
+      ]
+    },
+    "committedDate": "2026-04-22T13:33:41Z",
+    "author": {
+      "name": "Alex Rivero",
+      "user": {
+        "login": "arive298"
+      }
+    }
+  },
+  {
+    "associatedPullRequests": {
+      "nodes": [
+        {
+          "number": 2913,
+          "title": "Launch Homemade and King Arthur App"
+        }
+      ]
+    },
+    "committedDate": "2026-04-22T12:58:13Z",
+    "author": {
+      "name": "nischithaGE",
+      "user": {
+        "login": "nischithaGE"
+      }
+    }
+  }
+]

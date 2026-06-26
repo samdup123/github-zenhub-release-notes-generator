@@ -11,39 +11,22 @@ const args = minimist(process.argv.slice(2));
 const repoOwner = args["repo-owner"];
 const repoName = args["repo-name"];
 const branchName = args["branch-name"];
-const workspaceId = args["workspace-id"];
-const releaseId = args["release-id"];
 const githubApiToken = args["github-api-token"];
-const zenhubApiToken = args["zenhub-api-token"];
 const releaseA = args["_"][0];
 const releaseB = args["_"][1];
 
 const checkArgs = (args) => {
-  if (
-    !(
-      repoOwner &&
-      repoName &&
-      branchName &&
-      workspaceId &&
-      releaseId &&
-      githubApiToken &&
-      zenhubApiToken &&
-      releaseA &&
-      releaseB
-    )
-  ) {
+  if (!(repoOwner && repoName && branchName && githubApiToken && releaseA)) {
     console.error(
-      `Please provide the following arguments: repoOwner, repoName, branchName, workspaceId, releaseId, githubApiToken, zenhubApiToken, releaseA, releaseB
+      `Please provide the following arguments: repoOwner, repoName, branchName, githubApiToken, releaseA, releaseB
        Example (generating release notes for the React Library):
        node index.js \
          --repo-owner facebook \
          --repo-name react \
-         --workspace-id <you need to use GitHub GraphQL to find this> \
-         --release-id <you need to use Zenhub GraphQL to find this> \
+         --branch-name master \
          --github-api-token <find this on your github account, don't store anywhere on the internet> \
-         --zenhub-api-token <find this on your zenhub account, don't store anywhere on the internet> \
          releaseA # must match the name of an actual release tag on the GitHub Repository \
-         releaseB # must match the name of an actual release tag on the GitHub Repository and be newer than releaseA
+         [releaseB] (optional) # must match the name of an actual release tag on the GitHub Repository and be newer than releaseA. If not provided, the latest commit on the branch will be used
 
 
       ----------------
@@ -52,13 +35,10 @@ const checkArgs = (args) => {
       --repo-owner ${args["repo-owner"]}
       --repo-name ${args["repo-name"]}
       --branch-name ${args["branch-name"]}
-      --workspace-id ${args["workspace-id"]}
-      --release-id ${args["release-id"]}
       --github-api-token ${args["github-api-token"]}
-      --zenhub-api-token ${args["zenhub-api-token"]}
       releaseA ${args["_"][0]}
-      releaseA ${args["_"][1]}
-      `
+      releaseB ${args["_"][1]}
+      `,
     );
     process.exit(1);
   }
@@ -74,28 +54,36 @@ const tagExists = (releaseName, tags) => {
   return false;
 };
 
+const tagExistsOrIsLatestCommit = (releaseName, tags) => {
+  if (!releaseName) {
+  } else {
+    return tagExists(releaseName, tags);
+  }
+};
+
 const core = async () => {
   checkArgs(args);
   console.log("fetching tags");
   const tags = await fetchAllTags(repoOwner, repoName, githubApiToken);
 
   const releaseaExists = tagExists(releaseA, tags);
+  const latestCommit = releaseB === undefined;
   const releasebExists = tagExists(releaseB, tags);
 
-  if (releaseaExists && releasebExists) {
+  if (releaseaExists && (releasebExists || latestCommit)) {
     console.log("requested tags found");
   } else {
-    if (releaseaExists && !releasebExists) {
+    if (releaseaExists && !latestCommit && !releasebExists) {
       console.error(
-        `the tag you are searching for does not exist (${releaseB}), please use one of the following tags names`
+        `the tag you are searching for does not exist (${releaseB}), please use one of the following tags names`,
       );
-    } else if (!releaseaExists && releasebExists) {
+    } else if (!releaseaExists && (releasebExists || latestCommit)) {
       console.error(
-        `the tag you are searching for does not exist (${releaseA}), please use one of the following tags names`
+        `the tag you are searching for does not exist (${releaseA}), please use one of the following tags names`,
       );
     } else {
       console.error(
-        `the tags you are searching for do not exist (${releaseA}, ${releaseB}), please use one of the following tags names`
+        `the tags you are searching for do not exist (${releaseA}, ${releaseB}), please use one of the following tags names`,
       );
     }
     tags.forEach((tag) => {
@@ -118,7 +106,7 @@ const core = async () => {
 
   if (releaseADate > releaseBDate) {
     console.error(
-      `releaseA should be older than releaseB. ReleaseA: ${releaseADate}, ReleaseB: ${releaseBDate}`
+      `releaseA should be older than releaseB. ReleaseA: ${releaseADate}, ReleaseB: ${releaseBDate}`,
     );
     process.exit(1);
   }
@@ -130,8 +118,10 @@ const core = async () => {
     repoName,
     branchName,
     releaseADate,
-    githubApiToken
+    githubApiToken,
   );
+
+  fs.writeFileSync("./commits.json", JSON.stringify(commits, null, 2));
 
   const commitsBetweenReleases = commits.filter((commit) => {
     const commitDate = new Date(commit.committedDate);
@@ -140,14 +130,13 @@ const core = async () => {
 
   console.log("fetching issues");
 
-  const issues = await fetchIssues(
-    workspaceId,
-    releaseId,
-    repoName,
-    zenhubApiToken
-  );
+  const issues = await fetchIssues(repoOwner, repoName, githubApiToken);
+
+  fs.writeFileSync("./issues.json", JSON.stringify(issues, null, 2));
 
   const prsToIssueNumbers = connectPrsToIssueNumbers(issues, repoName);
+
+  console.log("TESTING PR 1031", prsToIssueNumbers[1031]);
 
   console.log("generating release notes");
 
@@ -158,7 +147,7 @@ const core = async () => {
     releaseA,
     releaseB,
     repoOwner,
-    repoName
+    repoName,
   );
 
   fs.mkdirSync("./output/", { recursive: true });

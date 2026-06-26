@@ -55,56 +55,43 @@ query ($repoOwner: String!, $repoName: String!, $since: GitTimestamp!, $commitCu
   }
 }`;
 
-const epicIssues = `
-  query epicsFromWorkspace($workspaceId: ID!, $epicIds: [ID!], $epicRetrievalCount: Int, $epicCursor: String, $issueRetrievalCount: Int, $issueCursor: String){
-    workspace(id: $workspaceId) {
-      epics(first: $epicRetrievalCount, after: $epicCursor, ids: $epicIds) {
-        pageInfo {
-          hasNextPage
-          endCursor
+const issues = `
+query (
+  $repoOwner: String!
+  $repoName: String!
+  $issueRetrievalCount: Int!
+  $issueCursor: String
+) {
+  repository(owner: $repoOwner, name: $repoName) {
+    issues(
+      first: $issueRetrievalCount
+      after: $issueCursor
+      states: [OPEN, CLOSED]
+      orderBy: { field: CREATED_AT, direction: DESC }
+    ) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        title
+        number
+        repository {
+          name
         }
-        nodes {
-          id
-          issue {
+        connectedPrs: closedByPullRequestsReferences(first: 20) {
+          nodes {
             number
             title
             repository {
               name
-            }
-            state
-            releases {
-              nodes {
-                id
-              }
-            }
-          }
-          childIssues(first: $issueRetrievalCount, after: $issueCursor) {
-            pageInfo {
-              hasNextPage
-              endCursor
-            }
-            nodes {
-              title
-              number
-              repository {
-                name
-              }
-              pullRequest
-              connectedPrs(first: 5) {
-                nodes {
-                  number
-                  title
-                  repository {
-                    name
-                  }
-                }
-              }
             }
           }
         }
       }
     }
   }
+}
 `;
 
-module.exports = { tags, commitsAfterTime, epicIssues };
+module.exports = { tags, commitsAfterTime, issues };

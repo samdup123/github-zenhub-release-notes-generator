@@ -4,14 +4,14 @@ const queryStrings = require("./queryStrings");
 const zenhubUrl = "https://api.zenhub.com/public/graphql";
 const githubUrl = "https://api.github.com/graphql";
 
-module.exports = (githubApiToken, zenhubApiToken) => {
+module.exports = (githubApiToken) => {
   return {
     githubTagsQuery: async (variables) => {
       return graphQlFetch(
         githubUrl,
         githubApiToken,
         queryStrings.tags,
-        variables
+        variables,
       );
     },
     githubCommitsAfterTimeQuery: async (variables) => {
@@ -21,16 +21,21 @@ module.exports = (githubApiToken, zenhubApiToken) => {
         githubUrl,
         githubApiToken,
         queryStrings.commitsAfterTime(branchName),
-        variables
+        variables,
       );
     },
-    zenhubEpicIssuesQuery: async (variables) => {
-      return graphQlFetch(
-        zenhubUrl,
-        zenhubApiToken,
-        queryStrings.epicIssues,
-        variables
-      );
+    githubIssuesQuery: function (organization, projectNumber) {
+      return async function (variables) {
+        variables.organization = organization;
+        variables.projectNumber = projectNumber;
+
+        return graphQlFetch(
+          githubUrl,
+          githubApiToken,
+          require("./queryStrings/githubIssues"),
+          variables,
+        );
+      };
     },
   };
 };
